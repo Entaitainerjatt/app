@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:theme="@style/ToolbarColoredBackArrow">
+
+
+        <RelativeLayout
+            android:id="@+id/main_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"></Spinner>
+
+
+            <ImageView
+                android:id="@+id/searchImageView"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/search" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="#cccccc"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <com.entertainerJatt.app.android.util.EditTextWithRegularFont
+            android:id="@+id/serachEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/search_back"
+            android:ems="10"
+            android:hint="Search"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:textColor="#999999"
+            android:textColorHint="#999999" />
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/recyclerViewFastScroller"
+        android:layout_toStartOf="@+id/recyclerViewFastScroller"
+        android:layout_above="@+id/progressLayout"
+        android:layout_below="@+id/linear">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+</android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.entertainerJatt.app.android.RecyclerViewFastScroller
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:id="@+id/recyclerViewFastScroller"
+        android:layout_below="@+id/linear"/>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="20dip"
+        android:id="@+id/listView_alphabets"
+
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:layout_below="@+id/linear"></android.support.v7.widget.RecyclerView>
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:id="@+id/progressLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/listView_alphabets"
+        android:layout_toStartOf="@+id/listView_alphabets">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

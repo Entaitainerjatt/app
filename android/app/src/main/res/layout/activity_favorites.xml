@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ToolbarColoredBackArrow"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+        <LinearLayout
+            android:id="@+id/main_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="35dp"
+                android:padding="4dp"
+                android:src="@mipmap/logo_white" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <com.entertainerJatt.app.android.util.TextViewWithRegularFont
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="20dp"
+        android:id="@+id/oppsText"
+        android:text="No favourites added" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

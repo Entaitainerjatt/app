@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<com.google.android.youtube.player.YouTubePlayerView-->
+    <!--android:id="@+id/youtube_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="400dp" />-->
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/youtube_view"
+            android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+    />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/artistImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinearLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorPrimaryDark"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/colorPrimaryDark"
+            app:tabTextColor="#a3a1a1" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_above="@+id/appBarLayout"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_margin="30dp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true">-->
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/imageView3"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="50dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:visibility="gone"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_alignParentEnd="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_alignParentTop="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="@string/vertical_ellipsis"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textColor="#ffffff"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textSize="25dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:srcCompat="@mipmap/add_to_fav_red" />&ndash;&gt;-->
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

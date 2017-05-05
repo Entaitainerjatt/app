@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="15dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.entertainerJatt.app.android.util.TextViewWithRegularFont
+                android:id="@+id/itemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/btnMore"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <com.entertainerJatt.app.android.util.TextViewWithRegularFont
+                android:id="@+id/btnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:drawableRight="@mipmap/view_all_icon"
+                android:gravity="center"
+                android:text="       View All"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+             />
+
+
+        <com.entertainerJatt.app.android.util.TextViewWithRegularFont
+            android:layout_width="match_parent"
+            android:text="No Videos"
+            android:id="@+id/textNoVideos"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp"
+            android:layout_height="150dp" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2px"
+            android:layout_marginTop="6dp"
+            android:background="#eeeeee"></View>
+
+
+    </LinearLayout>
+
+</LinearLayout>

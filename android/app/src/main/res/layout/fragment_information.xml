@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.entertainerJatt.app.android.util.TextViewWithBoldFont
+                android:id="@+id/namTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/songImage"
+
+                android:paddingLeft="3dp"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="17dp" />
+
+            <com.entertainerJatt.app.android.util.TextViewWithRegularFont
+                android:id="@+id/singerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/namTextView"
+                android:layout_alignLeft="@+id/namTextView"
+                android:layout_alignRight="@+id/namTextView"
+                android:layout_alignStart="@+id/namTextView"
+                android:layout_below="@+id/namTextView"
+                android:layout_marginTop="2dp"
+                android:paddingLeft="3dp"
+                android:text="By: Gudras Maan"
+                android:textColor="#999999"
+                android:textSize="14dp"
+                android:visibility="gone" />
+
+
+            <com.entertainerJatt.app.android.util.TextViewWithRegularFont
+                android:id="@+id/uploadedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/namTextView"
+                android:layout_alignLeft="@+id/namTextView"
+                android:layout_alignRight="@+id/namTextView"
+                android:layout_alignStart="@+id/namTextView"
+                android:layout_below="@+id/singerTextView"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="3dp"
+                android:text=""
+                android:textColor="#999999"
+                android:textSize="14dp"
+                android:visibility="gone" />
+
+            <com.entertainerJatt.app.android.util.PredicateLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textName"
+                android:layout_alignStart="@+id/textName"
+                android:layout_below="@+id/uploadedTextView"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal"
+    >
+
+
+            </com.entertainerJatt.app.android.util.PredicateLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearlayoutbelow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textName"
+                android:layout_alignStart="@+id/textName"
+                android:layout_below="@+id/linearlayout"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <com.entertainerJatt.app.android.util.TextViewWithRegularFont
+                    android:id="@+id/textdob"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight=".6"
+
+                    android:text="Date of Birth : 19/11/1992"
+                    android:textAllCaps="false"
+                    android:textColor="#919090"
+                    android:textSize="13dp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textName"
+                    android:layout_alignStart="@+id/textName"
+                    android:layout_below="@+id/linearlayout"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight=".4"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/imageFacebook"
+                        android:padding="2dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/facebook" />
+
+                    <ImageView
+                        android:id="@+id/imageGoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:padding="2dp"
+
+                        android:src="@mipmap/youtube" />
+
+                    <ImageView
+                        android:id="@+id/imageLinkedin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:padding="2dp"
+
+                        android:src="@mipmap/insta" />
+
+                    <ImageView
+                        android:id="@+id/imageTwitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:padding="2dp"
+                        android:src="@mipmap/twitter" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<com.entertainerJatt.app.android.util.TextViewWithRegularFont-->
+            <!--android:id="@+id/descriptionTitle"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignEnd="@+id/namTextView"-->
+            <!--android:layout_alignLeft="@+id/namTextView"-->
+            <!--android:layout_alignRight="@+id/namTextView"-->
+            <!--android:layout_alignStart="@+id/namTextView"-->
+            <!--android:layout_below="@+id/uploadedTextView"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:paddingLeft="3dp"-->
+            <!--android:text="Description"-->
+            <!--android:visibility="gone"-->
+            <!--android:textColor="#333333"-->
+            <!--android:textSize="18dp" />-->
+
+
+            <!--<com.entertainerJatt.app.android.util.TextViewWithRegularFont-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignEnd="@+id/namTextView"-->
+            <!--android:layout_alignLeft="@+id/namTextView"-->
+            <!--android:layout_alignRight="@+id/namTextView"-->
+            <!--android:layout_alignStart="@+id/namTextView"-->
+            <!--android:layout_below="@+id/descriptionTitle"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:paddingLeft="3dp"-->
+            <!--android:id="@+id/descriptionTextView"-->
+            <!--android:visibility="gone"-->
+            <!--android:text="Punjabi legend Gurdas Maan presents his thoughtful words for the biggest Punjabi anthem song of 2017. This powerful track is the first song from Gurdas Maan's upcoming album Punjab. Music is by Jatinder Shah while the music video is conceptualised by Gurickk G Maan.-->
+
+            <!--Read Lyrics: http://www.lyricsted.com/punjab-lyrics-gurdas-maan/#ixzz4cK3JXK9D"-->
+            <!--android:textColor="#999999"-->
+            <!--android:textSize="16dp" />-->
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearlayoutbelow"
+                android:layout_marginTop="2dp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
