@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.entertainerJatt.app.android">
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+
+
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+
+
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
+    <application
+        android:name=".util.Global"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <receiver android:name="com.entertainerJatt.app.android.reciever.SmsReceiver">
+
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MobileVerfificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+
+        <activity
+            android:name=".PerformerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <service android:name=".notification.FireIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".notification.FireMsgService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ViewAllActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".DetailPageActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".LocalSongsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "500387539160",
+    "firebase_url": "https://com-entertainerjatt.firebaseio.com",
+    "project_id": "com-entertainerjatt",
+    "storage_bucket": "com-entertainerjatt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500387539160:android:34c2ba27804049d1",
+        "android_client_info": {
+          "package_name": "com.entertainerjatt.app.android2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500387539160-o5o90aiufpo9e8qegnmvjl015jf0o14m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.entertainerjatt.app.android",
+            "certificate_hash": "341f17b0f701e2ff32ba0575eb4ead1f35a0c9ad"
+          }
+        },
+        {
+          "client_id": "500387539160-kh7uuiajn7eu1jc24l22va8ffdntak68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSoqUfzoyCZiC_x5jKJoI1fMEvxim29Fg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500387539160-kh7uuiajn7eu1jc24l22va8ffdntak68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
